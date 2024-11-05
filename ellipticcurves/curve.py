@@ -3,6 +3,17 @@ from .point import Point
 
 class EllipticCurve:
     def __init__(self, a, b, p):
+        """
+        Initialize an elliptic curve of the form y^2 = x^3 + ax + b over the finite field F_p.
+        
+        Parameters:
+            a (int): Coefficient of x.
+            b (int): Constant term.
+            p (int): Prime number defining the field F_p.
+        
+        Raises:
+            ValueError: If the curve is singular (i.e., 4a^3 + 27b^2 ≡ 0 mod p).
+        """
         if (4*a**3 + 27*b**2) % p == 0:
             raise ValueError('Elliptic curve is not non-singular')
         self.a = a
