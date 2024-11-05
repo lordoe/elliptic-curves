@@ -1,5 +1,3 @@
-# ellipticcurves/utils.py
-
 def multiplicative_inverse(a: int, p: int) -> int:
     """
     Compute the multiplicative inverse of a modulo p.
