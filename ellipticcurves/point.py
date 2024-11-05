@@ -45,9 +45,7 @@ class Point:
         x3 = (s**2 - 2*self.x) % self.curve.p
         y3 = (s*(self.x - x3) - self.y) % self.curve.p
         return Point(x3, y3, self.curve)
-    
-    
-    
+
     def __str__(self):
         return f"({self.x}, {self.y})"
 
